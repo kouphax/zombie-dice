@@ -105,7 +105,7 @@ if((function (){var i__10330 = (0);
 while(true){
 if((i__10330 < size__4520__auto__)){
 var win = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4519__auto__,i__10330);
-cljs.core.chunk_append(b__10331,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$48,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$49,"/images/gold-brain.png",cljs.core.constant$keyword$50,(20)], null)], null));
+cljs.core.chunk_append(b__10331,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$48,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$49,"images/gold-brain.png",cljs.core.constant$keyword$50,(20)], null)], null));
 
 var G__10334 = (i__10330 + (1));
 i__10330 = G__10334;
@@ -122,7 +122,7 @@ return cljs.core.chunk_cons(cljs.core.chunk(b__10331),null);
 }
 } else {
 var win = cljs.core.first(s__10329__$2);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$48,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$49,"/images/gold-brain.png",cljs.core.constant$keyword$50,(20)], null)], null),iter__10328(cljs.core.rest(s__10329__$2)));
+return cljs.core.cons(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$48,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$49,"images/gold-brain.png",cljs.core.constant$keyword$50,(20)], null)], null),iter__10328(cljs.core.rest(s__10329__$2)));
 }
 } else {
 return null;
@@ -132,7 +132,7 @@ break;
 }),null,null));
 });
 return iter__4521__auto__(cljs.core.range.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$42.cljs$core$IFn$_invoke$arity$1(player)));
-})()], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$45,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$51,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$49,"/images/brain.png",cljs.core.constant$keyword$52,(75),cljs.core.constant$keyword$50,(75),cljs.core.constant$keyword$53,(function (){
+})()], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$45,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$51,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$49,"images/brain.png",cljs.core.constant$keyword$52,(75),cljs.core.constant$keyword$50,(75),cljs.core.constant$keyword$53,(function (){
 return zombie_dice.app.update_score(cljs.core.constant$keyword$41.cljs$core$IFn$_invoke$arity$1(player));
 })], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$54,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$55," x "], null),cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(player)], null)], null)], null);
 });
