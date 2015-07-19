@@ -1,0 +1,2 @@
+{:require  [zombie-dice.app]
+ :init-fns [zombie-dice.app/init]}
