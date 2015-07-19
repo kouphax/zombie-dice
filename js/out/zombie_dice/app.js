@@ -72,43 +72,55 @@ return null;
 break;
 }
 });
+zombie_dice.app.reset_scoreboard = (function reset_scoreboard(){
+var G__10320 = zombie_dice.app.scoreboard;
+var G__10321 = cljs.core.PersistentArrayMap.EMPTY;
+return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__10320,G__10321) : cljs.core.reset_BANG_.call(null,G__10320,G__10321));
+});
 zombie_dice.app.finish_game = (function finish_game(){
-var players = (function (){var G__10321 = zombie_dice.app.scoreboard;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__10321) : cljs.core.deref.call(null,G__10321));
-})();
+var players = cljs.core.vals((function (){var G__10325 = zombie_dice.app.scoreboard;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__10325) : cljs.core.deref.call(null,G__10325));
+})());
 var winner = cljs.core.reduce.cljs$core$IFn$_invoke$arity$2(((function (players){
-return (function (p1__10318_SHARP_,p2__10319_SHARP_){
-if((cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(p1__10318_SHARP_) > cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(p2__10319_SHARP_))){
-return p1__10318_SHARP_;
+return (function (p1__10322_SHARP_,p2__10323_SHARP_){
+if((cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(p1__10322_SHARP_) > cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(p2__10323_SHARP_))){
+return p1__10322_SHARP_;
 } else {
-return p2__10319_SHARP_;
+return p2__10323_SHARP_;
 }
 });})(players))
-,cljs.core.vals(players));
+,players);
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(zombie_dice.app.scoreboard,cljs.core.update_in,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$41.cljs$core$IFn$_invoke$arity$1(winner),cljs.core.constant$keyword$42], null),cljs.core.inc);
 
 return zombie_dice.app.reset_scores();
 });
+zombie_dice.app.final_round_QMARK_ = (function final_round_QMARK_(){
+return cljs.core.some((function (p1__10326_SHARP_){
+return (cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(p1__10326_SHARP_) >= (13));
+}),cljs.core.vals((function (){var G__10328 = zombie_dice.app.scoreboard;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__10328) : cljs.core.deref.call(null,G__10328));
+})()));
+});
 zombie_dice.app.player_entry = (function player_entry(player){
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$43,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$19,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$44,"both"], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$45,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$19,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$46,"right"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$47,cljs.core.constant$keyword$31.cljs$core$IFn$_invoke$arity$1(player)], null),(function (){var iter__4521__auto__ = (function iter__10328(s__10329){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$43,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$44,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$45,cljs.core.constant$keyword$31.cljs$core$IFn$_invoke$arity$1(player)], null),(function (){var iter__4521__auto__ = (function iter__10335(s__10336){
 return (new cljs.core.LazySeq(null,(function (){
-var s__10329__$1 = s__10329;
+var s__10336__$1 = s__10336;
 while(true){
-var temp__4126__auto__ = cljs.core.seq(s__10329__$1);
+var temp__4126__auto__ = cljs.core.seq(s__10336__$1);
 if(temp__4126__auto__){
-var s__10329__$2 = temp__4126__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__10329__$2)){
-var c__4519__auto__ = cljs.core.chunk_first(s__10329__$2);
+var s__10336__$2 = temp__4126__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__10336__$2)){
+var c__4519__auto__ = cljs.core.chunk_first(s__10336__$2);
 var size__4520__auto__ = cljs.core.count(c__4519__auto__);
-var b__10331 = cljs.core.chunk_buffer(size__4520__auto__);
-if((function (){var i__10330 = (0);
+var b__10338 = cljs.core.chunk_buffer(size__4520__auto__);
+if((function (){var i__10337 = (0);
 while(true){
-if((i__10330 < size__4520__auto__)){
-var win = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4519__auto__,i__10330);
-cljs.core.chunk_append(b__10331,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$48,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$49,"images/gold-brain.png",cljs.core.constant$keyword$50,(20)], null)], null));
+if((i__10337 < size__4520__auto__)){
+var win = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4519__auto__,i__10337);
+cljs.core.chunk_append(b__10338,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$46,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$47,"images/gold-brain.png",cljs.core.constant$keyword$48,(20)], null)], null));
 
-var G__10334 = (i__10330 + (1));
-i__10330 = G__10334;
+var G__10341 = (i__10337 + (1));
+i__10337 = G__10341;
 continue;
 } else {
 return true;
@@ -116,13 +128,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__10331),iter__10328(cljs.core.chunk_rest(s__10329__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__10338),iter__10335(cljs.core.chunk_rest(s__10336__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__10331),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__10338),null);
 }
 } else {
-var win = cljs.core.first(s__10329__$2);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$48,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$49,"images/gold-brain.png",cljs.core.constant$keyword$50,(20)], null)], null),iter__10328(cljs.core.rest(s__10329__$2)));
+var win = cljs.core.first(s__10336__$2);
+return cljs.core.cons(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$46,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$47,"images/gold-brain.png",cljs.core.constant$keyword$48,(20)], null)], null),iter__10335(cljs.core.rest(s__10336__$2)));
 }
 } else {
 return null;
@@ -132,37 +144,23 @@ break;
 }),null,null));
 });
 return iter__4521__auto__(cljs.core.range.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$42.cljs$core$IFn$_invoke$arity$1(player)));
-})()], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$45,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$51,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$49,"images/brain.png",cljs.core.constant$keyword$52,(75),cljs.core.constant$keyword$50,(75),cljs.core.constant$keyword$53,(function (){
+})()], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$49,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$50,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$47,"images/brain.png",cljs.core.constant$keyword$51,(function (){
 return zombie_dice.app.update_score(cljs.core.constant$keyword$41.cljs$core$IFn$_invoke$arity$1(player));
-})], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$54,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$55," x "], null),cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(player)], null)], null)], null);
+})], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$52,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$53," x "], null),cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(player)], null)], null)], null);
+});
+zombie_dice.app.button = (function button(on_click,text){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$54,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$51,on_click], null),text], null);
 });
 zombie_dice.app.zombie_dice = (function zombie_dice__$1(){
-var add = (function (){
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$55,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$56,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombie_dice.app.button,(function (){
 var name = window.prompt("What is the players name?");
 if(cljs.core.truth_(name)){
 return zombie_dice.app.add_player(name);
 } else {
 return null;
 }
-});
-return ((function (add){
-return (function (){
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$56,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$57,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$58,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$53,add], null),"Add Player"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$58,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$53,zombie_dice.app.reset_scores], null),"Reset Scores"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$58,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$53,((function (add){
-return (function (){
-var G__10350 = zombie_dice.app.scoreboard;
-var G__10351 = cljs.core.PersistentArrayMap.EMPTY;
-return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__10350,G__10351) : cljs.core.reset_BANG_.call(null,G__10350,G__10351));
-});})(add))
-], null),"Reset Game"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$58,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$53,zombie_dice.app.finish_game], null),"Finish Game"], null)], null),(cljs.core.truth_(cljs.core.some(((function (add){
-return (function (p1__10335_SHARP_){
-return (cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(p1__10335_SHARP_) >= (13));
-});})(add))
-,cljs.core.vals((function (){var G__10352 = zombie_dice.app.scoreboard;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__10352) : cljs.core.deref.call(null,G__10352));
-})())))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$59,"Final round!"], null):null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$60,(function (){var iter__4521__auto__ = ((function (add){
-return (function iter__10353(s__10354){
-return (new cljs.core.LazySeq(null,((function (add){
-return (function (){
+}),"Add Player"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombie_dice.app.button,zombie_dice.app.reset_scores,"Reset Scores"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombie_dice.app.button,zombie_dice.app.reset_scoreboard,"Clear All!"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombie_dice.app.button,zombie_dice.app.finish_game,"Finish Game"], null)], null),(cljs.core.truth_(zombie_dice.app.final_round_QMARK_())?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$45,"Final round!"], null):null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$57,(function (){var iter__4521__auto__ = (function iter__10353(s__10354){
+return (new cljs.core.LazySeq(null,(function (){
 var s__10354__$1 = s__10354;
 while(true){
 var temp__4126__auto__ = cljs.core.seq(s__10354__$1);
@@ -204,16 +202,12 @@ return null;
 }
 break;
 }
-});})(add))
-,null,null));
-});})(add))
-;
+}),null,null));
+});
 return iter__4521__auto__((function (){var G__10363 = zombie_dice.app.scoreboard;
 return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__10363) : cljs.core.deref.call(null,G__10363));
 })());
 })()], null)], null);
-});
-;})(add))
 });
 zombie_dice.app.init = (function init(){
 var G__10367 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombie_dice.app.zombie_dice], null);
