@@ -26,9 +26,9 @@
    [:div.col.span_3 { :style { :text-align "right"}}
     [:h2.name (:name player)]
     (for [win (range (:games-won player))]
-      [:img { :src "/images/gold-brain.png" :height 20}]) ]
+      [:img { :src "images/gold-brain.png" :height 20}]) ]
    [:div.col.span_3
-    [:image { :src "/images/brain.png" :width 75 :height 75 :on-click #(update-score (:id player)) }]
+    [:image { :src "images/brain.png" :width 75 :height 75 :on-click #(update-score (:id player)) }]
      [:span.score
       [:small " x "]
       (:score player)]]])
