@@ -2,7 +2,7 @@
 set -e
 
 rm -rf target/
-git clone git@github.com:kouphax/zombie-dice.git --branch gh-pages target
+git clone git@github.com:kouphax/zombie-dice.git --branch gh-pages --single-branch target
 boot prepare
 
 cd target
