@@ -1,0 +1,65 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+
+h1, h2 {
+  font-family: 'Creepster', cursive;
+  font-size: 5rem;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  text-align:center;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+
+button {
+  font-family: 'Creepster', cursive;
+  font-size: 1.2rem;
+  border: 1px solid #333;
+}
+
+h2.name {
+  text-align: right;
+  line-height: 1rem;
+}
+
+span.score span, span.score small {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  vertical-align:top;
+  line-height: 4rem;
+
+}
+
+span.score small {
+  font-size: 1.5rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.buttons {
+  text-align:center;
+  margin-top: 2rem;
+}
+
+
+div.players {
+  width: 960px;
+  margin: 0 auto;
+  line-height: 1rem;
+
+  .row {
+   margin-top: 2rem;
+  }
+}
+
