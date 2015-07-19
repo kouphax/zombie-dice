@@ -27,11 +27,6 @@ button {
   border: 1px solid #333;
 }
 
-h2.name {
-  text-align: right;
-  line-height: 1rem;
-}
-
 span.score span, span.score small {
   font-family: 'Creepster', cursive;
   font-size: 3rem;
@@ -49,9 +44,8 @@ span.score small {
 
 .buttons {
   text-align:center;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
-
 
 div.players {
   width: 960px;
@@ -59,7 +53,21 @@ div.players {
   line-height: 1rem;
 
   .row {
-   margin-top: 2rem;
+    margin-top: 2rem;
+    clear:both;
+
+    .brain {
+      height: 75px;
+      width: 75px;
+    }
+
+    .name {
+      text-align: right;
+      h2 {
+        text-align: right;
+        line-height: 1rem;
+      }
+    }
   }
 }
 
